@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ES6",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "rootDir": "packages",
+    "declaration": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+  },
+  "include": [
+    "packages/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.*",
+    "**/*.test.*",
+    "node_modules"
+  ]
+}
