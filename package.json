@@ -12,10 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/kvalifik/components.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
