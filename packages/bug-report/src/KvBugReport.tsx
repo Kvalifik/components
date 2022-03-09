@@ -1,5 +1,4 @@
-import { FC } from 'react'
-import React from 'react'
+import React, { FC } from 'react'
 import {
   Box,
   Text,
@@ -45,7 +44,7 @@ const addNewLine = (text: string) => (
   </>
 )
 
-export const BugReport: FC<Props> = ({
+export const KvBugReport: FC<Props> = ({
   isOpen,
   setIsOpen,
   language = 'en',

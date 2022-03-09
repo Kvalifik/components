@@ -1,1 +1,1 @@
-export { BugReport } from './bug-report'
+export { KvBugReport } from './KvBugReport'
