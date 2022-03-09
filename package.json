@@ -4,6 +4,7 @@
   "description": "Kvalifk component library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" && npx tsc",
     "storybook": "start-storybook -p 6006",
