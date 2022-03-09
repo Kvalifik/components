@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Kvalifk component library",
   "main": "index.js",
-  "private": true,
   "workspaces": {
     "packages": [
       "packages/*"
