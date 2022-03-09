@@ -28,6 +28,11 @@
   "bugs": {
     "url": "https://github.com/kvalifik/components/issues"
   },
+  "release": {
+    "branches": [
+      "production"
+    ]
+  },
   "homepage": "https://github.com/kvalifik/components#readme",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
