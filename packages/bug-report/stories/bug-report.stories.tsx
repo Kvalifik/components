@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BugReport } from '../src'
+import KvBugReport from '../src/KvBugReport'
 import { Button } from '@chakra-ui/react'
 
 export default {
@@ -19,7 +19,7 @@ export const Default = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <BugReport
+      <KvBugReport
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         errorReportLink='https://google.com'

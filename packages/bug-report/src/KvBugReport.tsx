@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import React from 'react'
 import {
   Box,
   Text,
@@ -21,8 +20,7 @@ import {
   osName,
   osVersion
 } from 'react-device-detect'
-import { da } from './locale/da'
-import { en } from './locale/en'
+import React from 'react'
 
 type Props = {
   isOpen: boolean
@@ -30,11 +28,6 @@ type Props = {
   language?: 'en' | 'da'
   color?: string
   errorReportLink: string
-}
-
-const languages = {
-  da,
-  en
 }
 
 const addNewLine = (text: string) => (
@@ -45,7 +38,7 @@ const addNewLine = (text: string) => (
   </>
 )
 
-export const BugReport: FC<Props> = ({
+const KvBugReport: FC<Props> = ({
   isOpen,
   setIsOpen,
   language = 'en',
@@ -53,6 +46,12 @@ export const BugReport: FC<Props> = ({
   errorReportLink
 }) => {
   const toast = useToast()
+
+  const languages = {
+    da,
+    en
+  }
+
   const t = languages[language]
 
   const onCopyTextClicked = () => {
@@ -137,4 +136,34 @@ ${t.browserInfo}: ${browserName} ${fullBrowserVersion} (${window.innerWidth} x $
       </Modal>
     </>
   )
+}
+
+export default KvBugReport
+
+const da = {
+  title: 'Rapporter en fejl',
+  description:
+    'For at sikre at vi bedst muligt kan identificere og rette rejlen, er det vigtigt, at du laver en god beskrivelse.\nKlik på boksen herunder for at kopiere teksten. Gå derefter til fejlrapporteringssiden. Der kan du indsætte teksten og besvare spørgsmålene.',
+  whatWentWrong: 'Hvad gik galt?',
+  whichPageDidYouVisit: 'Hvilken side besøgte du?',
+  whatDidYouDo: 'Hvad gjorde du, da det gik galt?',
+  os: 'Styresystem',
+  browserInfo: 'Browser info',
+  copyText: 'Kopiér tekst',
+  cancel: 'Annuller',
+  goToErrorReporting: 'Gå til fejlrapportering'
+}
+
+const en = {
+  title: 'Report an error',
+  description:
+    "To ensure we can identift and correct the error, it's important to provide a good description.\nClick on the box to copy the text and go to the error reporting page where you can paste the text and answer the questions.",
+  whatWentWrong: 'What went wrong?',
+  whichPageDidYouVisit: 'Which page did you visit?',
+  whatDidYouDo: 'What did you do when the error occurred?',
+  os: 'Operating system',
+  browserInfo: 'Browser info',
+  copyText: 'Copy text',
+  cancel: 'Cancel',
+  goToErrorReporting: 'Go to error reporting'
 }
