@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Kvalifk component library",
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "type": "module",
+  "module": "dist/cjs/index.modern.js",
+  "source": "index.ts",
   "scripts": {
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" && npx tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "microbundle --jsx React.createElement"
+    "build": "microbundle --jsx React.createElement --no-compress --format modern,cjs"
   },
   "repository": {
     "type": "git",
@@ -58,8 +58,14 @@
     "microbundle": "^0.14.2",
     "webpack": "^5.66.0"
   },
+  "peerDependencies": {
+    "react": "17.0.2"
+  },
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=10"
+  }
 }
