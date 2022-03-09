@@ -1,15 +1,14 @@
-import React from 'react'
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { ChakraProvider, ChakraProviderProps } from '@chakra-ui/react'
+import React from 'react'
 
 type KvProviderProps = {
-  children: JSX.Element
+  children: ReactNode
   chakraProviderProps?: ChakraProviderProps
 }
 
-export const KvProvider: FC<KvProviderProps> = ({
-  children,
-  chakraProviderProps
-}) => {
+const KvProvider: FC<KvProviderProps> = ({ children, chakraProviderProps }) => {
   return <ChakraProvider {...chakraProviderProps}>{children}</ChakraProvider>
 }
+
+export default KvProvider
