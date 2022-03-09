@@ -2,12 +2,7 @@
   "name": "@kvalifik/components",
   "version": "1.0.0",
   "description": "Kvalifk component library",
-  "main": "index.js",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "main": "index.ts",
   "scripts": {
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" && npx tsc",
     "storybook": "start-storybook -p 6006",
